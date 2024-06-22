@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo_favicon.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/CSS/indexStyle.css'>
+    <link rel="stylesheet" href="/CSS/Navbar.css">
+</head>
+<body>
+    <header id="header-container">
+        <nav class="navbar">
+            <a class="logo" href="#"><span>G</span><span>D</span><span>S</span><span>C</span><span>Z</span><span>B</span><span>E</span><span>U</span><span>.</span></a>
+            <ul class="menu-links">
+              <span id="close-menu-btn" class="material-symbols-outlined">&#10006</span>
+              <li><a href="index.html">Home</a></li>
+              <!-- <li><a href="/EventsPage/Events.html">Events</a></li> -->
+              <li><a href="TeamPage.html">CoreTeam 23-24</a></li>
+              <li><a href="AboutUs.html">About us</a></li>
+              <li><a href="ContactUs.html">Contact us</a></li>
+            </ul>
+            <span id="hamburger-btn" class="material-symbols-outlined">&#9776</span>
+          </nav>
+    </header>
+    
+    <section class="hero-section">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="../Images/Slide_Images/android1_1.jpg" alt="Event 1">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/android2_1.jpg" alt="Event 2">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/android3_1.jpg" alt="Event 3">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/github_1.jpg" alt="Event 4">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/infosession_1.jpg" alt="Event 5">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/solutionChallenge_1.jpg" alt="Event 6">
+                </div>
+
+                <div class="slide">
+                    <img src="../Images/Slide_Images/senlik1_1.jpg" alt="Event 3">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/stant2_1.jpg" alt="Event 4">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/stant3_1.jpg" alt="Event 5">
+                </div>
+                <div class="slide">
+                    <img src="../Images/Slide_Images/stant1_1.jpg" alt="Event 6">
+                </div>
+            </div>
+        </div>
+
+        <a href="https://gdsc.community.dev/zonguldak-bulent-ecevit-university/" target="_blank">
+            <button>Kulübe Katıl</button>
+          </a>
+    </section>
+
+    <script>
+        const header = document.querySelector("header");
+        const hamburgerBtn = document.querySelector("#hamburger-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+        // Toggle mobile menu on hamburger button click
+        hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+        // Close mobile menu on close button click
+        closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+
+        let counter = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        const slideInterval = 3000; // 3 saniyede bir kaydır
+        const initialDelay = 200; // İlk kaydırma için başlangıç gecikmesi (yarım saniye)
+
+        const slideShow = () => {
+            slides.forEach((slide, index) => {
+                slide.style.transform = `translateX(-${100 * counter}%)`;
+            });
+            counter = (counter + 1) % totalSlides;
+        };
+
+        setTimeout(() => {
+            slideShow();
+            setInterval(slideShow, slideInterval);
+        }, initialDelay);
+    </script>
+</body>
+</html>

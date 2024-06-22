@@ -1,0 +1,99 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url("../Images/plain_black.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#header-container {
+  position: relative;
+  z-index: 100;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.slider {
+  width: 750px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.hero-section button {
+  background-color: #373838; /* Mavi renk */
+  padding: 12px 30px;
+  border: none;
+  align-self: center;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 28px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+  margin-top: 12px;
+
+}
+
+.hero-section button:hover {
+  color: #fff;
+  background: linear-gradient(to right, #4285F4, #34A853, #FBBC05, #EA4335);
+}
+@media (max-width: 1024px) {
+  .slider {
+    width: 730px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 798px) {
+  .slider {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    width: 400px;
+    height: 350px;
+  }
+}

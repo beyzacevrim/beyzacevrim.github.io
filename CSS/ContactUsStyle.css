@@ -1,0 +1,113 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-image: url("../Images/plain_black.jpg");
+  background-size: cover; /* Resmi ekran boyutuna sığacak şekilde ölçeklendir */
+  background-repeat: no-repeat; /* Resmin tekrar etmesini önle */
+
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.hero-section {
+  height: 100vh;
+  /*background-image: url("/Images/background_image1.png");*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/*explanation gdsc*/
+.hero-section .content { 
+    max-width: 200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Örnek buton stilleri */
+  button {
+    padding: 10px 20px;
+  border: none;
+  align-self: center;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-transform: uppercase;
+    background-color: #373838; /* Mavi renk */
+    cursor: pointer;
+    margin: 10px;
+    width: 140px;
+  }
+  
+  button:hover {
+    color: #fff;
+    background: linear-gradient(to right, #4285F4, #34A853, #FBBC05, #EA4335);
+  }
+  
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* .hero-section .content p {
+    width: 100px;
+    line-height: 70px;
+    text-decoration: none;
+    font-weight: 300;
+    max-width: 600px;
+    margin-top: 15px;
+    color: white;
+    font-size: 3rem;
+
+
+  } */
+
+  @media (max-width: 768px) {
+    .hero-section .content {
+      width: 100px;
+      text-align: center;
+      background-image: center;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #373838; /* Mavi renk */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin: 10px;
+      width: 140px;
+    }
+    
+    button:hover {
+      color: #fff;
+      background: linear-gradient(to right, #4285F4, #34A853, #FBBC05, #EA4335);
+    }
+  
+    /* .hero-section .content p {
+      max-width: 100%;
+      color: white;
+    } */
+
+  }

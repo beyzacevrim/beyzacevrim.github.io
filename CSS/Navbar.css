@@ -1,0 +1,134 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+/*  */
+  /* Dropdown menu styles */
+
+  /*  */
+  .navbar .logo {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 2.1rem;
+    text-decoration: none;
+  }
+  .navbar .logo span{
+    display: inline-block;
+  }
+  
+  .navbar .logo span:nth-child(1) {
+    color: #4285F4; /* G */
+  
+  }
+  .navbar .logo span:nth-child(2) {
+    color: #34A853; /* D */
+  
+  }.navbar .logo span:nth-child(3) {
+    color: #FBBC05; /* S */
+  
+  }.navbar .logo span:nth-child(4) {
+    color: #EA4335; /* C */
+  }
+.navbar .menu-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+  }
+  
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  
+  .navbar a:not(.logo):hover {
+    color: #EA4335;
+  }
+  
+#close-menu-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #hamburger-btn {
+    display: block;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+  }
+  #hamburger-btn,
+#close-menu-btn {
+  font-size: 24px; /* İstenilen boyut */
+}
+  
+  
+  @media (max-width: 890px) {
+    header {
+      padding: 13px;
+    }
+    body {
+      background-image: url("../Images/plain_black.jpg");
+      background-size: cover; /* Resmi ekran boyutuna sığacak şekilde ölçeklendir */
+      background-repeat: no-repeat; /* Resmin tekrar etmesini önle */
+      align-self: center;
+    }
+  
+    header.show-mobile-menu::before {
+      content: "";
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(5px);
+    }
+  
+    .navbar .logo {
+      font-size: 1.7rem;
+    }
+  
+      
+    #hamburger-btn, #close-menu-btn {
+      display: block;
+      color: #ffffff;
+    }
+    #close-menu-btn:hover, #hamburger-btn:hover{
+      color: #EA4335;
+    }
+  
+    .navbar .menu-links {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background: #252424;  
+      flex-direction: column;
+      padding: 70px 40px 0;
+      transition: left 0.2s ease;
+    }
+  
+    header.show-mobile-menu .navbar .menu-links {
+      background-image: url("../Images/plain_black.jpg");
+      left: 0;
+    }
+  
+    .navbar a {
+      color: #ffffff;
+    }
+
+  }

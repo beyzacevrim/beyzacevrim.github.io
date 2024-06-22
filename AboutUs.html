@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo_favicon.png">
+    <link rel="stylesheet" href="/CSS/AboutUsStyle.css">
+    <link rel="stylesheet" href="/CSS/Navbar.css">
+
+    <!-- Google Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  </head>
+    
+  <body id="header-container">
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="#"><span>G</span><span>D</span><span>S</span><span>C</span><span>Z</span><span>B</span><span>E</span><span>U</span><span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">&#10006</span>
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="/EventsPage/Events.html">Events</a></li> -->
+          <li><a href="TeamPage.html">CoreTeam 23-24</a></li>
+          <li><a href="AboutUs.html">About us</a></li>
+          <li><a href="ContactUs.html">Contact us</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">&#9776</span>
+      </nav>
+    </header>
+    
+
+
+    <section class="hero-section">
+      <div class="content">
+        <h2>ZONGULDAK BÜLENT ECEVİT ÜNİVERSİTESİ GDSC</h2>
+        <p>
+          Google Geliştirici Öğrenci Kulüpleri, Google geliştirici 
+          teknolojileriyle ilgilenen öğrencilere yönelik üniversite 
+          tabanlı topluluk gruplarıdır.
+          <br>
+          <br>
+          Geliştirici olarak büyümeye ilgi duyan tüm lisans veya yüksek lisans programlarından 
+          öğrenciler kabul edilir. Öğrenciler bir GDSC'ye katılarak akran öğrenmsei ile bir öğrenme 
+          ortamında bilgilerini geliştirir ve yerel işletmeler ve toplulukları için çözümler üretirler.
+
+        </p>
+      </div>
+    </section>
+
+        <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // Toggle mobile menu on hamburger button click
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // Close mobile menu on close button click
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+    
+  </body>
+</html>
+
+<!--
+  GOOGLE COLORS 
+  BLUE - 4285F4
+  GREEN - 34A853
+  YELLOW - FBBC05
+  RED - EA4335
+-->
+<!--
+    <h2>ZONGULDAK BÜLENT ECEVİT ÜNİVERSİTESİ GOOGLE DEVELOPER STUDENT CLUBS</h2>
+        <p>
+            Google Developer Student Club is a university-based. community 
+            group for students who are interested in technology, especially 
+            technology from Google.        
+        </p>
+-->

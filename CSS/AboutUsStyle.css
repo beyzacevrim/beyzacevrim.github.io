@@ -1,0 +1,62 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-image: url("../Images/plain_black.jpg");
+  background-size: cover; /* Resmi ekran boyutuna sığacak şekilde ölçeklendir */
+  background-repeat: no-repeat; /* Resmin tekrar etmesini önle */
+
+}
+.hero-section {
+  height: 100vh;
+  /*background-image: url("/Images/background_image1.png");*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+}
+/*explanation gdsc*/
+.hero-section .content { 
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+  }
+  
+  .hero-section .content h2 {
+    font-size: 3rem;
+    max-width: 600px;
+    line-height: 70px;
+  }
+  
+  .hero-section .content p {
+    font-weight: 300;
+    max-width: 600px;
+    margin-top: 15px;
+  }
+
+  .hero-section .content button:hover {
+    color: #fff;
+    background: #000000;
+  }
+  @media (max-width: 768px) {  
+    .hero-section .content {
+      text-align: center;
+      background-image: center;
+    }
+  
+    .hero-section .content :is(h2, p) {
+      max-width: 100%;
+    }
+  
+    .hero-section .content h2 {
+      font-size: 2.3rem;
+      line-height: 60px;
+    }
+  }
